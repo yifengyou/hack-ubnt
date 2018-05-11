@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+trap "echo hup" 1
+
+while true; do
+    ssh -Nf -R *:1992:localhost:22 -y -i /etc/persistent/toughswitch_dropbear  root@ip
+done
